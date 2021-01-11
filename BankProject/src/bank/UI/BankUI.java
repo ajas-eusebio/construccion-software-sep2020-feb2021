@@ -8,7 +8,11 @@ import javax.swing.table.DefaultTableModel;
 
 public class BankUI extends JFrame {
 
-    private DefaultTableModel modelo = new DefaultTableModel();
+    private DefaultTableModel modelo = new DefaultTableModel() {
+	@Override public boolean isCellEditable(int i, int i1) {
+	    return false;
+	}
+    };
 
     public BankUI() {
 	initComponents();
@@ -112,7 +116,7 @@ public class BankUI extends JFrame {
 	    cargarModeloTabla(table);
 	//Si el elemento no existe, crea una ventana mostrando que el elemento no existe
 	else
-	    JOptionPane.showMessageDialog(this, "Key not found", "Error", JOptionPane.WARNING_MESSAGE);
+	    JOptionPane.showMessageDialog(this, "No hubieron coincidencias", "Error", JOptionPane.WARNING_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     //Este metodo carga el modewlo la tabla
