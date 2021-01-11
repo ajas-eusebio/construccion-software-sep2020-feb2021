@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src.bankingProyect;
+package bankingProyect;
 
-import src.bank.UI.BankUI;
+import bank.UI.BankUI;
 
 public class Main {
 

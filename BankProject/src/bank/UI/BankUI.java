@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package src.bank.UI;
+package bank.UI;
 
 import bank.controller.BankTextController;
 import javax.swing.JTable;
