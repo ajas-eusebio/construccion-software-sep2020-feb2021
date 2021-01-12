@@ -125,7 +125,7 @@ public class BankUI extends JFrame {
             cargarModeloTabla(table);
         } //Si el elemento no existe, crea una ventana mostrando que el elemento no existe
         else {
-            JOptionPane.showMessageDialog(this, "Key not found", "Error", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(this, "No hubieron coincidencias", "Error", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
