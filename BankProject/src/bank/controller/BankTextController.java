@@ -3,6 +3,7 @@ package bank.controller;
 import bank.model.BankTextReader;
 import java.util.ArrayList;
 import java.util.Hashtable;
+import javax.swing.JOptionPane;
 
 public class BankTextController {
 
@@ -10,27 +11,28 @@ public class BankTextController {
     private static final int ROWS = 3;
 
     public String[][] getTable(String Filename) {
-	int i, j;
-	BankTextReader bankBuilder = new BankTextReader();
-	ArrayList<String> input;
-	input = bankBuilder.bankReader(Filename);
-	String[][] output = new String[input.size()][4];
-	String array;
-	String accounts;
-	String[] split;
-	for (i = 0; i < input.size(); i++) {
-	    array = input.get(i);
-	    split = array.split(",");
-	    accounts = split[3];
-	    for (j = 6; j < split.length; j++) {
-		accounts = accounts + ", " + split[j];
-		j = j + 2;
-	    }
-	    output[i][3] = accounts;
-	    for (j = 0; j < 3; j++)
-		output[i][j] = split[j];
-	}
-	return output;
+        int i, j;
+        BankTextReader bankBuilder = new BankTextReader();
+        ArrayList<String> input;
+        input = bankBuilder.bankReader(Filename);
+        String[][] output = new String[input.size()][4];
+        String array;
+        String accounts;
+        String[] split;
+        for (i = 0; i < input.size(); i++) {
+            array = input.get(i);
+            split = array.split(",");
+            accounts = split[3];
+            for (j = 6; j < split.length; j++) {
+                accounts = accounts + ", " + split[j];
+                j = j + 2;
+            }
+            output[i][3] = accounts;
+            for (j = 0; j < 3; j++) {
+                output[i][j] = split[j];
+            }
+        }
+        return output;
     }
 
     public String[] getHeader() {
@@ -47,7 +49,7 @@ public class BankTextController {
         Hashtable<String, String> input = bankBuilder.bankHashReader("Bank.txt");
         String[][] output = new String[ROWS][COLUMNS];
         //Si existe el elemento
-	key = containsUnderscore(key);
+        key = containsUnderscore(key);
         if (input.containsKey(key)) {
             String line;
             String[] split;
@@ -102,6 +104,5 @@ public class BankTextController {
             JOptionPane.showMessageDialog(null, "La contraseña no posee el guión bajo (_)");
         }
         return "";
-    }
     }
 }

@@ -9,9 +9,10 @@ import javax.swing.table.DefaultTableModel;
 public class BankUI extends JFrame {
 
     private DefaultTableModel modelo = new DefaultTableModel() {
-	@Override public boolean isCellEditable(int i, int i1) {
-	    return false;
-	}
+        @Override
+        public boolean isCellEditable(int i, int i1) {
+            return false;
+        }
     };
 
     public BankUI() {
@@ -45,9 +46,7 @@ public class BankUI extends JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Proyecto Banco");
-        setMaximumSize(new java.awt.Dimension(530, 490));
         setMinimumSize(new java.awt.Dimension(530, 490));
-        setPreferredSize(new java.awt.Dimension(530, 490));
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -73,7 +72,7 @@ public class BankUI extends JFrame {
         gridBagConstraints.insets = new java.awt.Insets(5, 5, 5, 5);
         jPanel3.add(jLabel2, gridBagConstraints);
 
-        jLabel3.setText("Llave = Nombre + Apellido (Separados por guión bajo)");
+        jLabel3.setText("Llave = Apellido_ Nombre (Separados por guión bajo)");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
