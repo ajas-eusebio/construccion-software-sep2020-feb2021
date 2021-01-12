@@ -6,11 +6,12 @@
 package bank.UI;
 
 import bank.controller.BankTextController;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class BankUI extends javax.swing.JFrame {
+public class BankUI extends JFrame {
 
     private DefaultTableModel modelo = new DefaultTableModel();
 
